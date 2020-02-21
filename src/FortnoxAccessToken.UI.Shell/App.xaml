@@ -1,0 +1,14 @@
+﻿<Application
+    x:Class="FortnoxAccessToken.UI.Shell.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:FortnoxAccessToken.Utilities.Controls;assembly=FortnoxAccessToken.Utilities">
+    <Application.Resources>
+        <!--<ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <controls:SharedResourceDictionary SharedSource="/FortnoxAccessToken.Module;component/TemplatesDictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="unused" />
+        </ResourceDictionary>-->
+    </Application.Resources>
+</Application>

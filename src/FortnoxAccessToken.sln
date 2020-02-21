@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Library", "FortnoxAccessToken.Library\FortnoxAccessToken.Library.csproj", "{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.UI.Shell", "FortnoxAccessToken.UI.Shell\FortnoxAccessToken.UI.Shell.csproj", "{408C7715-F6FA-40C1-AB66-E8635B40ED1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Dal", "FortnoxAccessToken.Dal\FortnoxAccessToken.Dal.csproj", "{08839CEB-252A-4A35-BEAE-793D002B7100}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C92805F6-3675-4D14-8125-7EDE2EBAB49C}"
+	ProjectSection(SolutionItems) = preProject
+		nuget.config = nuget.config
+		..\doc\UseCases.txt = ..\doc\UseCases.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.UI.Module", "FortnoxAccessToken.UI.Module\FortnoxAccessToken.UI.Module.csproj", "{4F44456E-20C4-4CB9-BAA3-CAF487122551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalFile", "FortnoxAccessToken.DalFile\FortnoxAccessToken.DalFile.csproj", "{B1542E44-3A4A-4075-B5B1-245574A0CD4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalSql", "FortnoxAccessToken.DalSql\FortnoxAccessToken.DalSql.csproj", "{394F049B-4251-469E-BBCE-80503CA95B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Utilities", "FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj", "{C9D7009D-F574-4481-AECD-ED5C830A0E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalFortnoxSdk", "FortnoxAccessToken.DalFortnoxSdk\FortnoxAccessToken.DalFortnoxSdk.csproj", "{C19A238C-61EF-4891-B89D-C440FD15DD62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalAppConfigXml", "FortnoxAccessToken.DalAppConfigXml\FortnoxAccessToken.DalAppConfigXml.csproj", "{98E59A67-E255-4C78-96A7-39AA78BC78E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408C7715-F6FA-40C1-AB66-E8635B40ED1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408C7715-F6FA-40C1-AB66-E8635B40ED1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408C7715-F6FA-40C1-AB66-E8635B40ED1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408C7715-F6FA-40C1-AB66-E8635B40ED1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08839CEB-252A-4A35-BEAE-793D002B7100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08839CEB-252A-4A35-BEAE-793D002B7100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08839CEB-252A-4A35-BEAE-793D002B7100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08839CEB-252A-4A35-BEAE-793D002B7100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F44456E-20C4-4CB9-BAA3-CAF487122551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F44456E-20C4-4CB9-BAA3-CAF487122551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F44456E-20C4-4CB9-BAA3-CAF487122551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F44456E-20C4-4CB9-BAA3-CAF487122551}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1542E44-3A4A-4075-B5B1-245574A0CD4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1542E44-3A4A-4075-B5B1-245574A0CD4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1542E44-3A4A-4075-B5B1-245574A0CD4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1542E44-3A4A-4075-B5B1-245574A0CD4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{394F049B-4251-469E-BBCE-80503CA95B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{394F049B-4251-469E-BBCE-80503CA95B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{394F049B-4251-469E-BBCE-80503CA95B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{394F049B-4251-469E-BBCE-80503CA95B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E7F4C18-B861-42DA-AFB7-F826CD12ACBD}
+	EndGlobalSection
+EndGlobal

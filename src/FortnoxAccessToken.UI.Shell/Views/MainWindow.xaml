@@ -1,0 +1,132 @@
+﻿<Window
+    x:Class="FortnoxAccessToken.UI.Shell.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:actions="clr-namespace:FortnoxAccessToken.UI.Shell.Actions"
+    xmlns:commonIcons="clr-namespace:FortnoxAccessToken.Utilities.Infrastructure.Icons;assembly=FortnoxAccessToken.Utilities"
+    xmlns:iconDisplayers="clr-namespace:FortnoxAccessToken.Utilities.Controls;assembly=FortnoxAccessToken.Utilities"
+    xmlns:interactivity="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="{Binding Title}"
+    Width="520"
+    Height="320"
+    prism:ViewModelLocator.AutoWireViewModel="True">
+
+    <Window.Resources>
+        <!--<Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Red"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+        <!--<Style TargetType="Button">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <BeginStoryboard.Storyboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetProperty="MouseEnter" />
+                                </Storyboard>
+                            </BeginStoryboard.Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>-->
+        <Style TargetType="TabItem">
+            <Setter Property="Header" Value="{Binding DataContext.Title}" />
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <ContentControl
+                                Margin="0,0,7,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Content="{Binding}" />
+
+                            <Button
+                                Grid.Column="1"
+                                Background="Transparent"
+                                BorderThickness="0"
+                                Content="X"
+                                Foreground="Black">
+                                <!--<Button.Style>
+                                    <Style>
+                                        <Style.Triggers>
+                                            <Trigger Property="Button.IsMouseOver" Value="True">
+                                                <Setter Property="Button.Background" Value="Red" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>-->
+                                <interactivity:Interaction.Triggers>
+                                    <interactivity:EventTrigger EventName="Click">
+                                        <actions:CloseTabAction />
+                                    </interactivity:EventTrigger>
+                                    <!--<interactivity:EventTrigger EventName="MouseEnter">
+                                        <actions:ChangeTabIconAction />
+                                    </interactivity:EventTrigger>-->
+                                </interactivity:Interaction.Triggers>
+                            </Button>
+
+                            <!--<ContentControl
+                                Margin="0,0,7,0"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"
+                                Content="{Binding}" />
+
+                            <Button Margin="8,0" BorderThickness="0">
+                                <interactivity:Interaction.Triggers>
+                                    <interactivity:EventTrigger EventName="Click">
+                                        <local:CloseTabAction />
+                                    </interactivity:EventTrigger>
+                                </interactivity:Interaction.Triggers>
+                                <StackPanel Orientation="Horizontal">
+                                    <iconDisplayers:IconDisplayer Icon="{x:Static commonIcons:StandardActionIcon.Clear}" />
+                                    <TextBlock Margin="2,0" Text="{Binding}" />
+                                </StackPanel>
+                            </Button>-->
+                        </Grid>
+                        <DataTemplate.Triggers />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+            Margin="0,5,0,5"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="GetAccessToken"
+                Content="Get Access Token" />
+            <Button
+                Margin="5"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="AppConfig"
+                Content="Configuration" />
+        </StackPanel>
+        <TabControl Grid.Row="1" prism:RegionManager.RegionName="{Binding TabRegion}" />
+        <!--<ContentControl
+            Grid.Row="1"
+            Margin="0,15,0,0"
+            prism:RegionManager.RegionName="{Binding ContentRegion}" />-->
+    </Grid>
+</Window>
