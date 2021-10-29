@@ -129,6 +129,10 @@
       <Project>{c19a238c-61ef-4891-b89d-c440fd15dd62}</Project>
       <Name>FortnoxAccessToken.DalFortnoxSdk</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FortnoxAccessToken.DalSQLite\FortnoxAccessToken.DalSQLite.csproj">
+      <Project>{26202ce2-db47-455b-a54b-d854a8dd751f}</Project>
+      <Name>FortnoxAccessToken.DalSQLite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FortnoxAccessToken.DalSql\FortnoxAccessToken.DalSql.csproj">
       <Project>{394f049b-4251-469e-bbce-80503ca95b18}</Project>
       <Name>FortnoxAccessToken.DalSql</Name>

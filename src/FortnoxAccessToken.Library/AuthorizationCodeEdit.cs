@@ -11,19 +11,25 @@ using System.Threading.Tasks;
 namespace FortnoxAccessToken.Library {
   [Serializable]
   public class AuthorizationCodeEdit : BusinessBase<AuthorizationCodeEdit> {
-    #region Properties
+		#region Properties
 
-    public static readonly PropertyInfo<string> AuthorizationCodeProperty = RegisterProperty<string>(c => c.AuthorizationCode);
-    public string AuthorizationCode {
-      get { return GetProperty(AuthorizationCodeProperty); }
-      set { SetProperty(AuthorizationCodeProperty, value); }
-    }
+		public static readonly PropertyInfo<int> IdCodeProperty = RegisterProperty<int>(c => c.Id);
+		public int Id {
+			get { return GetProperty(IdCodeProperty); }
+			set { SetProperty(IdCodeProperty, value); }
+		}
 
-    #endregion
+		public static readonly PropertyInfo<string> AuthorizationCodeProperty = RegisterProperty<string>(c => c.AuthorizationCode);
+		public string AuthorizationCode {
+			get { return GetProperty(AuthorizationCodeProperty); }
+			set { SetProperty(AuthorizationCodeProperty, value); }
+		}
 
-    #region Factory Methods
+		#endregion
 
-    public static AuthorizationCodeEdit NewAuthorizationCode() {
+		#region Factory Methods
+
+		public static AuthorizationCodeEdit NewAuthorizationCode() {
       return DataPortal.Create<AuthorizationCodeEdit>();
     }
 
@@ -62,6 +68,7 @@ namespace FortnoxAccessToken.Library {
              AuthorizationCode = AuthorizationCode
           };
           dal.Insert(data);
+					Id = data.Id;
         }
       }
     }

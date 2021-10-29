@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Library", "FortnoxAccessToken.Library\FortnoxAccessToken.Library.csproj", "{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}"
 EndProject
@@ -11,6 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Dal", "F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C92805F6-3675-4D14-8125-7EDE2EBAB49C}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		nuget.config = nuget.config
 		..\doc\UseCases.txt = ..\doc\UseCases.txt
 	EndProjectSection
@@ -26,6 +27,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalFortnoxSdk", "FortnoxAccessToken.DalFortnoxSdk\FortnoxAccessToken.DalFortnoxSdk.csproj", "{C19A238C-61EF-4891-B89D-C440FD15DD62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalAppConfigXml", "FortnoxAccessToken.DalAppConfigXml\FortnoxAccessToken.DalAppConfigXml.csproj", "{98E59A67-E255-4C78-96A7-39AA78BC78E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalSQLite", "FortnoxAccessToken.DalSQLite\FortnoxAccessToken.DalSQLite.csproj", "{26202CE2-DB47-455B-A54B-D854A8DD751F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +72,10 @@ Global
 		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98E59A67-E255-4C78-96A7-39AA78BC78E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
