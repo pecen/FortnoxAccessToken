@@ -91,12 +91,11 @@ namespace FortnoxAccessToken.DalSql {
           cm.Parameters.AddWithValue("@authorizationCode", data.AuthorizationCode);
           cm.Parameters.AddWithValue("@date", DateTimeOffset.Now);
           cm.ExecuteNonQuery();
-          //cm.Parameters.Clear();
-          //cm.CommandText = "SELECT @@identity";
-          //var r = cm.ExecuteScalar();
-          //var newId = int.Parse(r.ToString());
-          //data.Id = newId;
-        }
+					cm.Parameters.Clear();
+					cm.CommandText = "SELECT @@identity";
+					var r = cm.ExecuteScalar();
+					data.Id = int.Parse(r.ToString());
+				}
       }
     }
   }

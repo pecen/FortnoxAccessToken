@@ -10,10 +10,13 @@ namespace FortnoxAccessToken.Dal.Enums {
     [Description("FortnoxAccessToken.DalFile.DalManager,FortnoxAccessToken.DalFile")]
     DalFile,
 
-    [Description("FortnoxAccessToken.DalSql.DalManager,FortnoxAccessToken.DalSql")]
-    DalSql,
+		[Description("FortnoxAccessToken.DalSQLite.DalManager,FortnoxAccessToken.DalSQLite")]
+		DalSQLite,
 
-    [Description("FortnoxAccessToken.DalAppConfigXml.DalManager,FortnoxAccessToken.DalAppConfigXml")]
+		[Description("FortnoxAccessToken.DalSql.DalManager,FortnoxAccessToken.DalSql")]
+		DalSql,
+
+		[Description("FortnoxAccessToken.DalAppConfigXml.DalManager,FortnoxAccessToken.DalAppConfigXml")]
     DalAppConfigXml,
 
     [Description("FortnoxAccessToken.DalFortnoxSdk.DalManager,FortnoxAccessToken.DalFortnoxSdk")]

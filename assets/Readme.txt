@@ -8,5 +8,5 @@ För databas i SQL Server
 
 För databas i SQLite
 2b. SQLite/sqlite3.dll - SQLite databashanterare 64-bit v. 3.36.0 som kopieras/flyttas till lib-foldern
-3. FortnoxAccessToken.db & FortnoxAccessToken.db-journal - Själva SQLite-databasen med tabeller för FortnoxAccessToken
+3. FortnoxAccessToken.dbl - Själva SQLite-databasen med tabeller för FortnoxAccessToken
 
