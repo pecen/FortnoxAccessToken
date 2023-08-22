@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FortnoxAccessToken.Utilities.Infrastructure.Icons.Attributes {
+namespace FortnoxAccessToken.Core.Infrastructure.Icons.Attributes {
   public sealed class IconDescriptorAttribute : Attribute {
     /// <summary>
     /// Initializes a new instance of the IconCharacterAttribute class.

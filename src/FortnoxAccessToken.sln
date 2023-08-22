@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Library", "FortnoxAccessToken.Library\FortnoxAccessToken.Library.csproj", "{BA2463D8-AAC6-4D71-93C7-A5407CF920A7}"
 EndProject
@@ -29,6 +29,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalAppConfigXml", "FortnoxAccessToken.DalAppConfigXml\FortnoxAccessToken.DalAppConfigXml.csproj", "{98E59A67-E255-4C78-96A7-39AA78BC78E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalSQLite", "FortnoxAccessToken.DalSQLite\FortnoxAccessToken.DalSQLite.csproj", "{26202CE2-DB47-455B-A54B-D854A8DD751F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalJson", "FortnoxAccessToken.DalJson\FortnoxAccessToken.DalJson.csproj", "{9DFC577E-8FCB-4854-B092-40630D9D05ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Core", "FortnoxAccessToken.Core\FortnoxAccessToken.Core.csproj", "{245635B2-2805-40CC-AE70-26B45B0D80FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +80,14 @@ Global
 		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26202CE2-DB47-455B-A54B-D854A8DD751F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFC577E-8FCB-4854-B092-40630D9D05ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFC577E-8FCB-4854-B092-40630D9D05ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFC577E-8FCB-4854-B092-40630D9D05ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFC577E-8FCB-4854-B092-40630D9D05ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

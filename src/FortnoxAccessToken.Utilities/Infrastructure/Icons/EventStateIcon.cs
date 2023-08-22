@@ -1,11 +1,11 @@
-﻿using FortnoxAccessToken.Utilities.Infrastructure.Icons.Attributes;
+﻿using FortnoxAccessToken.Core.Infrastructure.Icons.Attributes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FortnoxAccessToken.Utilities.Infrastructure.Icons {
+namespace FortnoxAccessToken.Core.Infrastructure.Icons {
   /// <summary>
   /// Event state icon.
   /// </summary>

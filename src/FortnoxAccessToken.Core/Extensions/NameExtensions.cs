@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FortnoxAccessToken.Utilities.Extensions {
+namespace FortnoxAccessToken.Core.Extensions {
   /// <summary>
   /// Class resolving names of the used properties.
   /// </summary>

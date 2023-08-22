@@ -37,6 +37,7 @@ namespace FortnoxAccessToken.Library {
       AuthorizationId = authorizationId;
     }
 
+		[Execute]
     protected override void DataPortal_Execute() {
       try {
         using (var ctx = DalFactory.GetManager(DalManagerTypes.AuthCodeManager)) {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FortnoxAccessToken.Utilities.Infrastructure.Icons.Attributes {
+namespace FortnoxAccessToken.Core.Infrastructure.Icons.Attributes {
   /// <summary>
   /// Message type attribute.
   /// </summary>

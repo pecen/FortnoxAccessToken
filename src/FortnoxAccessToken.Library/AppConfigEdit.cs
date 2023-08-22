@@ -54,10 +54,12 @@ namespace FortnoxAccessToken.Library {
     #region Data Access
 
     [RunLocal]
+		[Create]
     protected override void DataPortal_Create() {
       base.DataPortal_Create();
     }
 
+		[Fetch]
     private void DataPortal_Fetch() {
       using (var dalManager = DalFactory.GetManager(DalManagerTypes.AppConfigManager)) {
         var dal = dalManager.GetProvider<IAppConfigDal>();
@@ -71,6 +73,7 @@ namespace FortnoxAccessToken.Library {
       }
     }
 
+		[Insert]
     protected override void DataPortal_Insert() {
       using (var ctx = DalFactory.GetManager(DalManagerTypes.AppConfigManager)) {
         var dal = ctx.GetProvider<Dal.IAppConfigDal>();
@@ -86,6 +89,7 @@ namespace FortnoxAccessToken.Library {
       }
     }
 
+		[Update]
     protected override void DataPortal_Update() {
       using (var ctx = DalFactory.GetManager(DalManagerTypes.AppConfigManager)) {
         var dal = ctx.GetProvider<IAppConfigDal>();

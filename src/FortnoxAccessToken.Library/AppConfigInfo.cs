@@ -44,10 +44,11 @@ namespace FortnoxAccessToken.Library {
       return DataPortal.Fetch<AppConfigInfo>();
     }
 
-    #endregion
+		#endregion
 
-    #region Data Access
+		#region Data Access
 
+		[Fetch]
     private void DataPortal_Fetch() {
       using (var dalManager = DalFactory.GetManager(DalManagerTypes.AppConfigManager)) {
         var dal = dalManager.GetProvider<IAppConfigDal>();

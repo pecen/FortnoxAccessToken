@@ -33,14 +33,15 @@ namespace FortnoxAccessToken.Library {
       return DataPortal.Create<AuthorizationCodeEdit>();
     }
 
-    //public static AccessTokenEdit GetAccessToken(string authorizationId, string clientSecret) {
-    //  return DataPortal.Fetch<AccessTokenEdit>(new AccessTokenCriteria(authorizationId, clientSecret));
-    //}
+		//public static AccessTokenEdit GetAccessToken(string authorizationId, string clientSecret) {
+		//  return DataPortal.Fetch<AccessTokenEdit>(new AccessTokenCriteria(authorizationId, clientSecret));
+		//}
 
-    #endregion
+		#endregion
 
-    #region Data Access
+		#region Data Access
 
+		[Create]
     protected override void DataPortal_Create() {
       using (BypassPropertyChecks) {
         AuthorizationCode = string.Empty;
@@ -49,17 +50,18 @@ namespace FortnoxAccessToken.Library {
       base.DataPortal_Create();
     }
 
-    //private void DataPortal_Fetch(AccessTokenCriteria criteria) {
-    //  using (var dalManager = DalFactory.GetManager()) {
-    //    var dal = dalManager.GetProvider<IAccessTokenDal>();
-    //    var data = dal.Fetch(criteria.AuthorizationId, criteria.ClientSecret);
-    //    //AccessToken = dal.Fetch(criteria.AuthorizationId, criteria.ClientSecret);
+		//private void DataPortal_Fetch(AccessTokenCriteria criteria) {
+		//  using (var dalManager = DalFactory.GetManager()) {
+		//    var dal = dalManager.GetProvider<IAccessTokenDal>();
+		//    var data = dal.Fetch(criteria.AuthorizationId, criteria.ClientSecret);
+		//    //AccessToken = dal.Fetch(criteria.AuthorizationId, criteria.ClientSecret);
 
-    //    AccessToken = data.AccessToken;
-    //    HasError = data.HasError;
-    //  }
-    //}
+		//    AccessToken = data.AccessToken;
+		//    HasError = data.HasError;
+		//  }
+		//}
 
+		[Insert]
     protected override void DataPortal_Insert() {
       using (var dalManager = DalFactory.GetManager(DalManagerTypes.AuthCodeManager)) {
         var dal = dalManager.GetProvider<IAuthorizationCodeDal>();

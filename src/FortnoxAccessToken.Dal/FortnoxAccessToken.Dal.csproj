@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FortnoxAccessToken.Dal</RootNamespace>
     <AssemblyName>FortnoxAccessToken.Dal</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -54,6 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FortnoxAccessToken.Core\FortnoxAccessToken.Core.csproj">
+      <Project>{245635B2-2805-40CC-AE70-26B45B0D80FA}</Project>
+      <Name>FortnoxAccessToken.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj">
       <Project>{C9D7009D-F574-4481-AECD-ED5C830A0E23}</Project>
       <Name>FortnoxAccessToken.Utilities</Name>

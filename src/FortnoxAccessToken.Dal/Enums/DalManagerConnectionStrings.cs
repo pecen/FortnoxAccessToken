@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
-namespace FortnoxAccessToken.Dal.Enums {
-  public enum DalManagerConnectionStrings {
-    [Description("FortnoxAccessToken.DalFile.DalManager,FortnoxAccessToken.DalFile")]
-    DalFile,
+namespace FortnoxAccessToken.Dal.Enums
+{
+	public enum DalManagerConnectionStrings
+	{
+		[Description("FortnoxAccessToken.DalFile.DalManager,FortnoxAccessToken.DalFile")]
+		DalFile,
 
 		[Description("FortnoxAccessToken.DalSQLite.DalManager,FortnoxAccessToken.DalSQLite")]
 		DalSQLite,
@@ -17,9 +14,9 @@ namespace FortnoxAccessToken.Dal.Enums {
 		DalSql,
 
 		[Description("FortnoxAccessToken.DalAppConfigXml.DalManager,FortnoxAccessToken.DalAppConfigXml")]
-    DalAppConfigXml,
+		DalAppConfigXml,
 
-    [Description("FortnoxAccessToken.DalFortnoxSdk.DalManager,FortnoxAccessToken.DalFortnoxSdk")]
-    DalFortnoxSdk
-  }
+		[Description("FortnoxAccessToken.DalFortnoxSdk.DalManager,FortnoxAccessToken.DalFortnoxSdk")]
+		DalFortnoxSdk
+	}
 }

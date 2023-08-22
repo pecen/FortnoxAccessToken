@@ -1,28 +1,44 @@
-﻿using FortnoxAccessToken.UI.Module.Views;
+﻿using FortnoxAccessToken.Core.Enums.UI;
+using FortnoxAccessToken.UI.Module.Views;
+using Prism.Ioc;
 using Prism.Modularity;
 using Prism.Regions;
-using System;
-using Microsoft.Practices.Unity;
-using Prism.Unity;
 
-namespace FortnoxAccessToken.UI.Module {
-  public class FortnoxAccessTokenModule : IModule {
-    private IRegionManager _regionManager;
-    private IUnityContainer _container;
+namespace FortnoxAccessToken.UI.Module
+{
+	public class FortnoxAccessTokenModule : IModule
+	{
+		private readonly IRegionManager _regionManager;
 
-    public FortnoxAccessTokenModule(IUnityContainer container, IRegionManager regionManager) {
-      _container = container;
-      _regionManager = regionManager;
-    }
+		public FortnoxAccessTokenModule(IRegionManager regionManager)
+		{
+			_regionManager = regionManager;
+		}
 
-    public void Initialize() {
-      //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(GetAccessToken));
-      //_regionManager.RegisterViewWithRegion("ContentRegion", typeof(AppConfig));
-      _regionManager.RegisterViewWithRegion("TabRegion", typeof(GetAccessToken));
-      _regionManager.RegisterViewWithRegion("TabRegion", typeof(AppConfig));
+		public void Initialize()
+		{
+			// Old code. Probably can be removed. 
 
-      _container.RegisterTypeForNavigation<GetAccessToken>("GetAccessToken");
-      _container.RegisterTypeForNavigation<AppConfig>("AppConfig");
-    }
-  }
+			//_regionManager.RegisterViewWithRegion("ContentRegion", typeof(GetAccessToken));
+			//_regionManager.RegisterViewWithRegion("ContentRegion", typeof(AppConfig));
+
+			//_regionManager.RegisterViewWithRegion("TabRegion", typeof(GetAccessToken));
+			//_regionManager.RegisterViewWithRegion("TabRegion", typeof(AppConfig));
+
+			//_container.RegisterTypeForNavigation<GetAccessToken>("GetAccessToken");
+			//_container.RegisterTypeForNavigation<AppConfig>("AppConfig");
+		}
+
+		public void OnInitialized(IContainerProvider containerProvider)
+		{
+			// Prism's navigation mechanism
+			_regionManager.RequestNavigate(RegionNames.TabRegion.ToString(), nameof(GetAccessToken));
+		}
+
+		public void RegisterTypes(IContainerRegistry containerRegistry)
+		{
+			containerRegistry.RegisterForNavigation<GetAccessToken>("GetAccessToken");
+			containerRegistry.RegisterForNavigation<AppConfig>("AppConfig");
+		}
+	}
 }

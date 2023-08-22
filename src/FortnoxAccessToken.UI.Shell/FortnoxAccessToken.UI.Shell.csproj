@@ -9,12 +9,13 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FortnoxAccessToken.UI.Shell</RootNamespace>
     <AssemblyName>FortnoxAccessTokenApp</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -70,8 +71,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Enums\WindowRegions.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -105,18 +104,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CSLA-Core">
-      <Version>4.6.603</Version>
+    <PackageReference Include="Csla">
+      <Version>5.5.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf">
+      <Version>1.1.39</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
-      <Version>7.0.0.396</Version>
+      <Version>8.1.97</Version>
     </PackageReference>
-    <PackageReference Include="Prism.Unity" Version="6.3.0" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
     <PackageReference Include="Prism.Wpf">
-      <Version>6.3.0</Version>
+      <Version>8.1.97</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.5</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FortnoxAccessToken.Core\FortnoxAccessToken.Core.csproj">
+      <Project>{245635b2-2805-40cc-ae70-26b45b0d80fa}</Project>
+      <Name>FortnoxAccessToken.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FortnoxAccessToken.DalAppConfigXml\FortnoxAccessToken.DalAppConfigXml.csproj">
       <Project>{98e59a67-e255-4c78-96a7-39aa78bc78e6}</Project>
       <Name>FortnoxAccessToken.DalAppConfigXml</Name>

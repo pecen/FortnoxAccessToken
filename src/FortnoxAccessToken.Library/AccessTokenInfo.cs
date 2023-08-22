@@ -42,8 +42,8 @@ namespace FortnoxAccessToken.Library {
     /// <param name="authorizationCode"></param>
     /// <returns></returns>
     public static bool Exists(string authorizationCode) {
-      var cmd = new AccessTokenExistsCmd(authorizationCode);
-      cmd = DataPortal.Execute<AccessTokenExistsCmd>(cmd);
+			var cmd = DataPortal.Create<AccessTokenExistsCmd>(authorizationCode); // new AccessTokenExistsCmd(authorizationCode);
+      cmd = DataPortal.Execute(cmd);
 
       if (!string.IsNullOrEmpty(cmd.ErrorMessage)) {
         ErrorMessage = cmd.ErrorMessage;
@@ -53,10 +53,11 @@ namespace FortnoxAccessToken.Library {
       return cmd.AccessTokenExists;
     }
 
-    #endregion
+		#endregion
 
-    #region Data Access
+		#region Data Access
 
+		[Fetch]
     private void DataPortal_Fetch(AccessTokenCriteria criteria) {
       try {
         using (var dalManager = DalFactory.GetManager(DalManagerTypes.FortnoxManager)) {

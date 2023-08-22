@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Markup;
 
-namespace FortnoxAccessToken.Utilities.Controls {
+namespace FortnoxAccessToken.Core.Controls {
   /// <summary>
   /// The shared resource dictionary is a specialized resource dictionary
   /// that loads it content only once. If a second instance with the same source

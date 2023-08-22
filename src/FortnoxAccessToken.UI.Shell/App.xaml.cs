@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using FortnoxAccessToken.UI.Module;
+using FortnoxAccessToken.UI.Shell.Views;
+using Prism.Ioc;
+using Prism.Modularity;
+using Prism.Unity;
 using System.Windows;
 
 namespace FortnoxAccessToken.UI.Shell
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
-    {
-        protected override void OnStartup(StartupEventArgs e)
-        {
-            base.OnStartup(e);
+	/// <summary>
+	/// Interaction logic for App.xaml
+	/// </summary>
+	public partial class App : PrismApplication
+	{
+		protected override Window CreateShell()
+		{
+			return Container.Resolve<MainWindow>();
+		}
 
-            var bootstrapper = new Bootstrapper();
-            bootstrapper.Run();
-        }
-    }
+		protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+		{
+			base.ConfigureModuleCatalog(moduleCatalog);
+
+			moduleCatalog.AddModule(typeof(FortnoxAccessTokenModule));
+		}
+
+		protected override void RegisterTypes(IContainerRegistry containerRegistry)
+		{
+			base.RegisterRequiredTypes(containerRegistry);
+		}
+	}
 }
