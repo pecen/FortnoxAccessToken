@@ -22,8 +22,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalFile"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalSql", "FortnoxAccessToken.DalSql\FortnoxAccessToken.DalSql.csproj", "{394F049B-4251-469E-BBCE-80503CA95B18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Utilities", "FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj", "{C9D7009D-F574-4481-AECD-ED5C830A0E23}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalFortnoxSdk", "FortnoxAccessToken.DalFortnoxSdk\FortnoxAccessToken.DalFortnoxSdk.csproj", "{C19A238C-61EF-4891-B89D-C440FD15DD62}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalAppConfigXml", "FortnoxAccessToken.DalAppConfigXml\FortnoxAccessToken.DalAppConfigXml.csproj", "{98E59A67-E255-4C78-96A7-39AA78BC78E6}"
@@ -33,6 +31,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.DalJson", "FortnoxAccessToken.DalJson\FortnoxAccessToken.DalJson.csproj", "{9DFC577E-8FCB-4854-B092-40630D9D05ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.Core", "FortnoxAccessToken.Core\FortnoxAccessToken.Core.csproj", "{245635B2-2805-40CC-AE70-26B45B0D80FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FortnoxAccessToken.UI.Styles", "FortnoxAccessToken.UI.Styles\FortnoxAccessToken.UI.Styles.csproj", "{9277DD56-9C6D-4A8C-9B02-620D1D541689}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,10 +64,6 @@ Global
 		{394F049B-4251-469E-BBCE-80503CA95B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{394F049B-4251-469E-BBCE-80503CA95B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{394F049B-4251-469E-BBCE-80503CA95B18}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9D7009D-F574-4481-AECD-ED5C830A0E23}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19A238C-61EF-4891-B89D-C440FD15DD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -88,6 +84,10 @@ Global
 		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{245635B2-2805-40CC-AE70-26B45B0D80FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9277DD56-9C6D-4A8C-9B02-620D1D541689}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9277DD56-9C6D-4A8C-9B02-620D1D541689}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9277DD56-9C6D-4A8C-9B02-620D1D541689}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9277DD56-9C6D-4A8C-9B02-620D1D541689}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

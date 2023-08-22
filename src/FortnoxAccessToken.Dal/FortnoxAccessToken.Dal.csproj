@@ -46,8 +46,6 @@
     <Compile Include="Dto\AccessTokenDto.cs" />
     <Compile Include="Dto\AppConfigDto.cs" />
     <Compile Include="Dto\AuthorizationCodeDto.cs" />
-    <Compile Include="Enums\DalManagerConnectionStrings.cs" />
-    <Compile Include="Enums\DalManagerTypes.cs" />
     <Compile Include="IAccessTokenDal.cs" />
     <Compile Include="IAppConfigDal.cs" />
     <Compile Include="IAuthorizationCodeDal.cs" />
@@ -59,10 +57,7 @@
       <Project>{245635B2-2805-40CC-AE70-26B45B0D80FA}</Project>
       <Name>FortnoxAccessToken.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj">
-      <Project>{C9D7009D-F574-4481-AECD-ED5C830A0E23}</Project>
-      <Name>FortnoxAccessToken.Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

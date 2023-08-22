@@ -136,6 +136,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\FortnoxAccessToken.Core\FortnoxAccessToken.Core.csproj">
+      <Project>{245635B2-2805-40CC-AE70-26B45B0D80FA}</Project>
+      <Name>FortnoxAccessToken.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FortnoxAccessToken.Dal\FortnoxAccessToken.Dal.csproj">
       <Project>{08839CEB-252A-4A35-BEAE-793D002B7100}</Project>
       <Name>FortnoxAccessToken.Dal</Name>

@@ -5,15 +5,20 @@ using Microsoft.Data.Sqlite;
 using System;
 using System.Configuration;
 
-namespace FortnoxAccessToken.DalSQLite {
-	public class AuthorizationCodeDal : IAuthorizationCodeDal {
-		public AuthorizationCodeDal() {
+namespace FortnoxAccessToken.DalSQLite
+{
+	public class AuthorizationCodeDal : IAuthorizationCodeDal
+	{
+		public AuthorizationCodeDal()
+		{
 			// Both of these rows work, but use either of them. 
 			//SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_winsqlite3()); 
 			SQLitePCL.Batteries.Init();
 		}
-		public bool Exists(string authorizationId) {
-			using (var ctx = ConnectionManager<SqliteConnection>.GetManager(ConfigurationManager.AppSettings["DbInUse"])) {
+		public bool Exists(string authorizationId)
+		{
+			using (var ctx = ConnectionManager<SqliteConnection>.GetManager(ConfigurationManager.AppSettings["DbInUse"]))
+			{
 				var cm = ctx.Connection.CreateCommand();
 				cm.CommandType = System.Data.CommandType.Text;
 				cm.CommandText = "SELECT AuthorizationCode FROM AuthorizationCodes WHERE AuthorizationCode=@authorizationId";
@@ -24,9 +29,12 @@ namespace FortnoxAccessToken.DalSQLite {
 			}
 		}
 
-		public void Insert(AuthorizationCodeDto data) {
-			using (var ctx = ConnectionManager<SqliteConnection>.GetManager(ConfigurationManager.AppSettings["DbInUse"])) {
-				using (var cm = ctx.Connection.CreateCommand()) {
+		public void Insert(AuthorizationCodeDto data)
+		{
+			using (var ctx = ConnectionManager<SqliteConnection>.GetManager(ConfigurationManager.AppSettings["DbInUse"]))
+			{
+				using (var cm = ctx.Connection.CreateCommand())
+				{
 					cm.CommandType = System.Data.CommandType.Text;
 					cm.CommandText = "Insert Into AuthorizationCodes (AuthorizationCode,Date) VALUES (@authorizationCode,@date)";
 					cm.Parameters.AddWithValue("@authorizationCode", data.AuthorizationCode);

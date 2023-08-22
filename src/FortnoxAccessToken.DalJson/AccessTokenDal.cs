@@ -29,7 +29,7 @@ namespace FortnoxAccessToken.DalJson
 
 		public AccessTokenDto Fetch(string authorizationId, string clientSecret)
 		{
-			string accessToken = string.Empty;
+			string accessToken;
 			AuthorizationConnector authConnector = null;
 
 			try
@@ -40,7 +40,7 @@ namespace FortnoxAccessToken.DalJson
 				//accessToken = new AuthorizationConnector().GetAccessToken(authorizationId, clientSecret);
 				//accessToken = new AuthorizationConnector().GetAccessToken(AuthorizationId, ClientSecret);
 
-				if (accessToken == string.Empty)
+				if (string.IsNullOrEmpty(accessToken))
 				{
 					accessToken = "Denna AuthorizationCode är redan använd, eller har gått ut (giltighetstid = 30 dagar).";
 				}

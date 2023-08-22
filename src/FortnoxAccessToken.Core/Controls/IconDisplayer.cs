@@ -1,4 +1,4 @@
-﻿using FortnoxAccessToken.Core.Infrastructure.Icons;
+﻿using FortnoxAccessToken.Core.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Windows;

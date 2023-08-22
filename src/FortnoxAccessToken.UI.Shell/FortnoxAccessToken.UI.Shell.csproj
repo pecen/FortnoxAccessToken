@@ -64,7 +64,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Actions\BaseTabAction.cs" />
     <Compile Include="Actions\CloseTabAction.cs" />
     <Compile Include="Actions\ChangeTabIconAction.cs" />
     <Compile Include="App.xaml.cs">
@@ -157,10 +156,6 @@
     <ProjectReference Include="..\FortnoxAccessToken.UI.Module\FortnoxAccessToken.UI.Module.csproj">
       <Project>{4f44456e-20c4-4cb9-baa3-caf487122551}</Project>
       <Name>FortnoxAccessToken.UI.Module</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj">
-      <Project>{c9d7009d-f574-4481-aecd-ed5c830a0e23}</Project>
-      <Name>FortnoxAccessToken.Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

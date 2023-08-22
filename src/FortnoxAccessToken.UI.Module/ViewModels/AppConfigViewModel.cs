@@ -1,9 +1,9 @@
-﻿using FortnoxAccessToken.Core.Extensions;
+﻿using FortnoxAccessToken.Core.Enums.DAL;
+using DalManager = FortnoxAccessToken.Core.Enums.DAL.DalManagers;
+using FortnoxAccessToken.Core.Extensions;
 using FortnoxAccessToken.Core.MVVM;
-using FortnoxAccessToken.Dal.Enums;
 using FortnoxAccessToken.Library;
 using FortnoxAccessToken.UI.Module.Commands;
-using FortnoxAccessToken.UI.Module.Enums;
 using Prism.Commands;
 using Prism.Events;
 using Prism.Regions;
@@ -28,7 +28,7 @@ namespace FortnoxAccessToken.UI.Module.ViewModels
 			set
 			{
 				SetProperty(ref _dalManagerInUse, value);
-				if (value == (int)Enums.DalManagers.SQLServer)
+				if (value == (int)DalManager.SQLServer)
 				{ // || value == (int)Enums.DalManagers.SQLite) {
 					IsDatabase = true;
 				}
@@ -98,7 +98,7 @@ namespace FortnoxAccessToken.UI.Module.ViewModels
 			ConfigEdit = obj;
 
 			DalManagers = new ObservableCollection<string>();
-			foreach (DalManagers item in Enum.GetValues(typeof(DalManagers)))
+			foreach (DalManager item in Enum.GetValues(typeof(DalManager)))
 			{
 				DalManagers.Add(item.GetEnumDescription());
 			}
@@ -111,11 +111,11 @@ namespace FortnoxAccessToken.UI.Module.ViewModels
 
 			if (ConfigEdit.DalManagerType == DalManagerConnectionStrings.DalSql.GetEnumDescription())
 			{
-				DalManagerInUse = (int)Enums.DalManagers.SQLServer;
+				DalManagerInUse = (int)DalManager.SQLServer;
 			}
 			else if (ConfigEdit.DalManagerType == DalManagerConnectionStrings.DalFile.GetEnumDescription())
 			{
-				DalManagerInUse = (int)Enums.DalManagers.File;
+				DalManagerInUse = (int)DalManager.File;
 			}
 
 			BaseUri = ConfigEdit.BaseUri;
@@ -138,15 +138,15 @@ namespace FortnoxAccessToken.UI.Module.ViewModels
 
 		private void Execute()
 		{
-			if (DalManagerInUse == (int)Enums.DalManagers.File)
+			if (DalManagerInUse == (int)DalManager.File)
 			{
 				ConfigEdit.DalManagerType = DalManagerConnectionStrings.DalFile.GetEnumDescription();
 			}
-			else if (DalManagerInUse == (int)Enums.DalManagers.SQLServer)
+			else if (DalManagerInUse == (int)DalManager.SQLServer)
 			{
 				ConfigEdit.DalManagerType = DalManagerConnectionStrings.DalSql.GetEnumDescription();
 			}
-			else if (DalManagerInUse == (int)Enums.DalManagers.SQLite)
+			else if (DalManagerInUse == (int)DalManager.SQLite)
 			{
 				ConfigEdit.DalManagerType = DalManagerConnectionStrings.DalSQLite.GetEnumDescription();
 			}
@@ -154,11 +154,11 @@ namespace FortnoxAccessToken.UI.Module.ViewModels
 			ConfigEdit.ClientSecret = ClientSecret;
 			if (IsDatabase)
 			{
-				if (DbInUse == (int)Enums.SQLServerInstances.Local)
+				if (DbInUse == (int)SQLServerInstances.Local)
 				{
 					ConfigEdit.DbInUse = SQLServerInstances.Local.ToString();
 				}
-				else if (DbInUse == (int)Enums.SQLServerInstances.Server)
+				else if (DbInUse == (int)SQLServerInstances.Server)
 				{
 					ConfigEdit.DbInUse = SQLServerInstances.Server.ToString();
 				}

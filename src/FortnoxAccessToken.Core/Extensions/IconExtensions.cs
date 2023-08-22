@@ -2,7 +2,7 @@
 using FortnoxAccessToken.Core.Infrastructure.Icons.Attributes;
 using System;
 
-namespace FortnoxAccessToken.Core.Infrastructure.Icons
+namespace FortnoxAccessToken.Core.Extensions
 {
 	public static class IconExtensions
 	{

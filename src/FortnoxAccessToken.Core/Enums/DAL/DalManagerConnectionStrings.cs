@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace FortnoxAccessToken.Dal.Enums
+namespace FortnoxAccessToken.Core.Enums.DAL
 {
 	public enum DalManagerConnectionStrings
 	{

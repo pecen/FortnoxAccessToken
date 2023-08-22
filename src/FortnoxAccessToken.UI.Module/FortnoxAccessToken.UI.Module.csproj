@@ -158,8 +158,6 @@
     <Compile Include="Converters\BoolToGreyForegroundConverter.cs" />
     <Compile Include="Converters\BoolToOpacityConverter.cs" />
     <Compile Include="Converters\BoolToVisibleConverter.cs" />
-    <Compile Include="Enums\DalManagers.cs" />
-    <Compile Include="Enums\SQLServerInstances.cs" />
     <Compile Include="FortnoxAccessTokenModule.cs" />
     <Compile Include="Models\AccessTokenRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -199,14 +197,8 @@
       <Project>{ba2463d8-aac6-4d71-93c7-a5407cf920a7}</Project>
       <Name>FortnoxAccessToken.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FortnoxAccessToken.Utilities\FortnoxAccessToken.Utilities.csproj">
-      <Project>{C9D7009D-F574-4481-AECD-ED5C830A0E23}</Project>
-      <Name>FortnoxAccessToken.Utilities</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Analyzer Include="..\..\lib\Csla.5.5.2\analyzers\c#\Csla.Analyzers.dll" />
   </ItemGroup>

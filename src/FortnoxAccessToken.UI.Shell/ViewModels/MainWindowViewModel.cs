@@ -1,6 +1,4 @@
-﻿using FortnoxAccessToken.UI.Module.ViewModels;
-using FortnoxAccessToken.Core.Extensions;
-using FortnoxAccessToken.Core.Enums.UI;
+﻿using FortnoxAccessToken.Core.Enums.UI;
 using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Regions;

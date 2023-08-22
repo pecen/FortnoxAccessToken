@@ -1,10 +1,12 @@
-﻿using Prism.Regions;
+﻿using Microsoft.Xaml.Behaviors;
+using Prism.Regions;
 using System.Windows;
 using System.Windows.Controls;
+using FortnoxAccessToken.Core.Extensions;
 
 namespace FortnoxAccessToken.UI.Shell.Actions
 {
-	public class CloseTabAction : BaseTabAction // TriggerAction<Button>
+	public class CloseTabAction : TriggerAction<Button>
 	{
 		protected override void Invoke(object parameter)
 		{
@@ -15,13 +17,13 @@ namespace FortnoxAccessToken.UI.Shell.Actions
 				return;
 			}
 
-			var tabItem = FindParent<TabItem>(args.OriginalSource as DependencyObject);
+			var tabItem = (args.OriginalSource as DependencyObject).FindParent<TabItem>();
 			if (tabItem == null)
 			{
 				return;
 			}
 
-			var tabControl = FindParent<TabControl>(tabItem);
+			var tabControl = tabItem.FindParent<TabControl>();
 			if (tabControl == null)
 			{
 				return;

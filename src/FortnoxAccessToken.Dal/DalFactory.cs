@@ -1,5 +1,5 @@
-﻿using FortnoxAccessToken.Core.Extensions;
-using FortnoxAccessToken.Dal.Enums;
+﻿using FortnoxAccessToken.Core.Enums.DAL;
+using FortnoxAccessToken.Core.Extensions;
 using System;
 using System.Configuration;
 
