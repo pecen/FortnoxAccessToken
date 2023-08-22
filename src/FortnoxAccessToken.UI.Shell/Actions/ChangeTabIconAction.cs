@@ -1,45 +1,50 @@
-﻿using Prism.Regions;
+﻿using Microsoft.Xaml.Behaviors;
+using Prism.Regions;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Interactivity;
+using FortnoxAccessToken.Core.Extensions;
 
 namespace FortnoxAccessToken.UI.Shell.Actions
 {
-  public class ChangeTabIconAction : BaseTabAction { //TriggerAction<Button> {
-    protected override void Invoke(object parameter) {
-      var args = parameter as RoutedEventArgs;
+	public class ChangeTabIconAction : TriggerAction<Button>
+	{
+		protected override void Invoke(object parameter)
+		{
+			var args = parameter as RoutedEventArgs;
 
-      if (args == null) {
-        return;
-      }
+			if (args == null)
+			{
+				return;
+			}
 
-      var tabItem = FindParent<TabItem>(args.OriginalSource as DependencyObject);
+			var tabItem = (args.OriginalSource as DependencyObject).FindParent<TabItem>();
 
-      if (tabItem == null) {
-        return;
-      }
+			if (tabItem == null)
+			{
+				return;
+			}
 
-      var tabControl = FindParent<TabControl>(tabItem);
+			var tabControl = tabItem.FindParent<TabControl>();
 
-      if (tabControl == null) {
-        return;
-      }
+			if (tabControl == null)
+			{
+				return;
+			}
 
-      //tabControl.Items.Remove(tabItem.Content);
+			//tabControl.Items.Remove(tabItem.Content);
 
-      IRegion region = RegionManager.GetObservableRegion(tabControl).Value;
-      if (region == null) {
-        return;
-      }
+			IRegion region = RegionManager.GetObservableRegion(tabControl).Value;
+			if (region == null)
+			{
+				return;
+			}
 
-      if (region.Views.Contains(tabItem.Content)) {
-        region.Remove(tabItem.Content);
-      }
-    }
-  }
+			if (region.Views.Contains(tabItem.Content))
+			{
+				region.Remove(tabItem.Content);
+			}
+		}
+	}
 }

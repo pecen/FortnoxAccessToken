@@ -24,7 +24,9 @@ bld/
 
 # User-specific directories
 [Bb]ackup
+[Bb]uild
 [Ll]ib/
+[Ss]etup/
 
 # Visual Studio 2015 cache/options directory
 .vs/

@@ -9,11 +9,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FortnoxAccessToken.Module</RootNamespace>
     <AssemblyName>FortnoxAccessToken.Module</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -94,8 +95,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CSLA-Core">
-      <Version>4.6.603</Version>
+    <PackageReference Include="Csla">
+      <Version>5.5.2</Version>
     </PackageReference>
     <PackageReference Include="Prism.Core">
       <Version>7.0.0.362</Version>
